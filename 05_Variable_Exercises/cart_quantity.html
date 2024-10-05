@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h3>Cart Quantity</h3>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity}`)
+    "
+    >
+      Show Quantity
+    </button>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity += 1}`)
+    "
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity += 2}`)
+    "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity += 3}`)
+    "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity += 4}`)
+    "
+    >
+      +4
+    </button>
+    <button
+      onclick="
+    console.log(`Cart Quantity : ${cartQuantity += 5}`)
+    "
+    >
+      +5
+    </button>
+    <!-- 5h -->
+    <button
+      onclick="
+      cartQuantity = 0
+    console.log(`Cart Quantity is reset`)
+    console.log(`Cart Quantity : ${cartQuantity }`)
+
+    "
+    >
+      Reset Cart
+    </button>
+    <!-- 5i -->
+    <button
+      onclick="
+  console.log(`1 Item removed from cart`)
+  console.log(`Cart Quantity : ${cartQuantity -= 1 }`)
+
+  "
+    >
+      Remove from cart
+    </button>
+    <!-- 5j 5k -->
+    <button
+      onclick="
+  console.log(`Cart Quantity : ${cartQuantity -= 2}`)
+  "
+    >
+      -2
+    </button>
+    <button
+      onclick="
+  console.log(`Cart Quantity : ${cartQuantity -= 3}`)
+  "
+    >
+      -3
+    </button>
+  </body>
+  <script>
+    let cartQuantity = 0;
+  </script>
+</html>
