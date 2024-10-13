@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock paper scissor</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+    <button
+      onclick="
+    const randomMove = Math.floor(Math.random()*3)
+    let compMove = ''
+    if(randomMove === 0){
+        compMove = 'rock'
+    } else if(randomMove === 1){
+        compMove = 'paper'
+    } else if(randomMove === 2){
+        compMove = 'scissor'
+    }
+    let result = ''
+    if(compMove === 'rock' )
+    {
+        result = 'tie'
+    } else if(compMove === 'paper'){
+        result = 'You loose'
+    } else if(compMove === 'scissor'){
+        result = 'You win'
+    }
+
+    alert(`You choose rock and computer choose ${compMove} result is : ${result}`)
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+    const randomMovePaper = Math.floor(Math.random()*3)
+    let compMovePaper = ''
+
+    if(randomMovePaper === 0){
+        compMovePaper = 'rock'
+    } else if(randomMovePaper === 1){
+        compMovePaper = 'paper'
+    } else if(randomMovePaper === 2){
+        compMovePaper = 'scissor'
+    }
+
+    let resultPaper = ''
+
+    if(compMovePaper === 'rock')
+    {
+        resultPaper = 'You Win'
+    } else if (compMovePaper === 'paper'){
+        resultPaper = 'Tie'
+    } else if(compMovePaper === 'scissor'){
+        resultPaper = 'You loose'
+    }
+    alert(`You choose paper and computer choose ${compMovePaper} result is : ${resultPaper}`)
+
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+    const randomMoveScissor = Math.floor(Math.random()*3)
+    let compMoveScissor = ''
+
+    if(randomMoveScissor === 0){
+        compMoveScissor = 'rock'
+    } else if(randomMoveScissor === 1){
+        compMoveScissor = 'paper'
+    } else if(randomMoveScissor === 2){
+        compMoveScissor = 'scissor'
+    }
+
+    let resultScissor = ''
+
+    if(compMoveScissor === 'rock')
+    {
+        resultScissor = 'You loose'
+    } else if (compMoveScissor === 'paper'){
+        resultScissor = 'You win'
+    } else if(compMoveScissor === 'scissor'){
+        resultScissor = 'Tie'
+    }
+    alert(`You choose scissor and computer choose ${compMoveScissor} result is : ${resultScissor}`)
+    "
+    >
+      Scissor
+    </button>
+    <script></script>
+  </body>
+</html>
