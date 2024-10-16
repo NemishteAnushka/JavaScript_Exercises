@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors with function</title>
+</head>
+ <body>
+    <p>Rock Paper Scissor</p>
+    <button
+      onclick="
+   pickCompMove()
+    let resultRock = ''
+    if(compMove === 'rock' )
+    {
+        resultRock = 'tie'
+    } else if(compMove === 'paper'){
+        resultRock = 'You lose'
+    } else if(compMove === 'scissor'){
+        resultRock = 'You win'
+    }
+
+    alert(`You choose rock and computer choose ${compMove} result is : ${resultRock}`)
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+   
+   pickCompMove()
+
+    let resultPaper = ''
+
+    if(compMove === 'rock')
+    {
+        resultPaper = 'You Win'
+    } else if (compMove === 'paper'){
+        resultPaper = 'Tie'
+    } else if(compMove === 'scissor'){
+        resultPaper = 'You lose'
+    }
+    alert(`You choose paper and computer choose ${compMove} result is : ${resultPaper}`)
+
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+  
+   pickCompMove()
+
+    let resultScissor = ''
+
+    if(compMove === 'rock')
+    {
+        resultScissor = 'You lose'
+    } else if (compMove === 'paper'){
+        resultScissor = 'You win'
+    } else if(compMove === 'scissor'){
+        resultScissor = 'Tie'
+    }
+    alert(`You choose scissor and computer choose ${compMove} result is : ${resultScissor}`)
+    "
+    >
+      Scissor
+    </button>
+    <script>
+        let compMove = ''
+
+    function pickCompMove(){
+        const randomMove = Math.floor(Math.random()*3)
+        if(randomMove === 0){
+            compMove = 'rock'
+        } else if(randomMove === 1){
+            compMove = 'paper'
+        } else if(randomMove === 2){
+            compMove = 'scissor'
+        }
+    }
+    </script>
+  </body>
+</html>
