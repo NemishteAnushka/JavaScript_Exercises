@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors with function</title>
-</head>
- <body>
+  </head>
+  <body>
     <p>Rock Paper Scissor</p>
     <button
       onclick="
@@ -67,18 +67,18 @@
       Scissor
     </button>
     <script>
-        let compMove = ''
+      let compMove = "";
 
-    function pickCompMove(){
-        const randomMove = Math.floor(Math.random()*3)
-        if(randomMove === 0){
-            compMove = 'rock'
-        } else if(randomMove === 1){
-            compMove = 'paper'
-        } else if(randomMove === 2){
-            compMove = 'scissor'
+      function pickCompMove() {
+        const randomMove = Math.floor(Math.random() * 3);
+        if (randomMove === 0) {
+          compMove = "rock";
+        } else if (randomMove === 1) {
+          compMove = "paper";
+        } else if (randomMove === 2) {
+          compMove = "scissor";
         }
-    }
+      }
     </script>
   </body>
 </html>

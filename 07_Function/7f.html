@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Convert the tempreture</h1>
+    <script>
+      //fahrenheit to celsius
+      function covertToFahrenheit(celsius) {
+        return `Fahrenheit = ${(celsius * 9) / 5 + 32}`;
+      }
+      //celsius to fahrenheit
+      function covertToCelsius(fahrenheit) {
+        return `Celsius = ${((fahrenheit - 32) * 5) / 9}`;
+      }
+
+      function convertTempreture(degree, unit) {
+        if (unit === "C") {
+          const result = covertToFahrenheit(degree);
+          return `${result}F`;
+        } else if (unit === "F") {
+          const result = covertToCelsius(degree);
+          return `${result}C`;
+        }
+      }
+      console.log(convertTempreture(25, "C"));
+      console.log(convertTempreture(86, "F"));
+    </script>
+  </body>
+</html>
