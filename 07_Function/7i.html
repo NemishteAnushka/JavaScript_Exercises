@@ -9,6 +9,12 @@
     <h2>Convert length to km mile and ft</h2>
     <script>
       function convertLength(length, from, to) {
+        if (from !== "km" && from !== "miles" && from !== "ft") {
+          return `Invalid unit: ${from}`;
+        } else if (to !== "km" && to !== "miles" && to !== "ft") {
+          return `Invalid unit: ${to}`;
+        }
+
         if (from === "km" && to === "miles") {
           return `${length / 1.6} miles`;
         } else if (from === "miles" && to === "km") {
@@ -26,6 +32,7 @@
       console.log(convertLength(50, "km", "km"));
       console.log(convertLength(5, "miles", "ft"));
       console.log(convertLength(5, "km", "ft"));
+      console.log(convertLength(50, "lbs", "lbs"));
     </script>
   </body>
 </html>
