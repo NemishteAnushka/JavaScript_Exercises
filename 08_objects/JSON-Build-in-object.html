@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JSON JSON (JavaScript Object Notation) build in javascript object</h2>
+    <p>
+      Similar to javascript object keys must be in double quotes and json does
+      not support functions while objects do
+    </p>
+    <p>JSON.strigify()</p>
+    <p>it helps us convert a JavaScript object to JSON</p>
+    <p>JSON.parse()</p>
+    <p>it helps us convert a JSON to JavaScript object</p>
+
+    <script>
+      const obj = {
+        name: "anushka",
+        lname: "Nemishte",
+        fun: function fun1() {
+          console.log("function inside the object");
+        },
+        hobbies: {
+          dancing: "kathak",
+          food: "chinise",
+        },
+      };
+
+      //now lets convert this obj to json
+
+      const OBJ_to_JSON = JSON.stringify(obj);
+      console.log(OBJ_to_JSON); // you will notice this havent print the function
+
+      //now lets convert json to obj using parse
+
+      const JSON_to_OBJ = JSON.parse(OBJ_to_JSON);
+      console.log(JSON_to_OBJ);
+    </script>
+  </body>
+</html>

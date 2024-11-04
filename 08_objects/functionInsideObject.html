@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Function Inside object</h2>
+    <script>
+      const object1 = {
+        name: "tshirt",
+        fun: function fun1() {
+          console.log("I am function inside the object ");
+        },
+      };
+      object1.fun();
+
+      //its just like console.log()
+      console.log(typeof console); // this is object and log is function we know it as
+      console.log(typeof console.log); // function inside object known as method
+    </script>
+  </body>
+</html>

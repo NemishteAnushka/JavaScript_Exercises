@@ -8,6 +8,7 @@
   <body>
     <h2>Bracket Notation</h2>
     <script>
+      //Dot notation is faster and easier to read, but it cannot be used for accessing properties dynamically or properties with special characters. Bracket notation can be used for accessing properties dynamically and properties with special characters, but it is slightly slower and can be more verbose.
       const obj = {
         name: "Tshirt",
         price: 1000,
@@ -15,6 +16,18 @@
       console.log(obj);
       console.log(obj["name"]);
       console.log(obj["price"]);
+
+      //insert in object using bracket notation
+
+      obj["myname"] = "myName";
+      console.log(obj);
+
+      //delete
+
+      delete obj["myname"];
+      console.log(obj);
+
+      
     </script>
   </body>
 </html>
