@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-btn">new one</button>
+    <script>
+      console.log(document);
+      console.log(document.title);
+      //change title using document.title
+      document.title = "title changed";
+
+      console.log(document.body);
+
+      //change inside the body element
+      //   document.body.innerHTML = "<button>Great job!</button>";
+      //   console.log(document.body.innerHTML);
+
+      console.log(document.querySelector("button"));
+      console.log(document.querySelector(".js-btn"));
+    </script>
+  </body>
+</html>
