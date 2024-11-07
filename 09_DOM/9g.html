@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Amezone Ship Calculator</p>
+    <input
+      type="text"
+      placeholder="Enter the amount"
+      class="js-amt-input"
+      onkeydown="handleOnKeyDown(event)"
+    />
+    <button onclick="calculateAmt()">Calculate</button>
+    <p class="js-displayAmt"></p>
+
+    <script>
+      function handleOnKeyDown(event) {
+        if (event.key === "Enter") {
+          calculateAmt();
+        }
+      }
+      const calculateAmt = () => {
+        const inputValue = document.querySelector(".js-amt-input");
+        let cost = Number(inputValue.value) * 100;
+
+        if (cost < 4000) {
+          cost = cost + 1000;
+        }
+
+        const displayCost = (document.querySelector(
+          ".js-displayAmt"
+        ).innerHTML = `$${cost / 100}`); // this is to correct float values
+      };
+    </script>
+  </body>
+</html>

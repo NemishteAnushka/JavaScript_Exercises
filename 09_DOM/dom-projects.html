@@ -15,6 +15,28 @@
 
     <p>Rock paper scissors game</p>
     <a href="./09-rock-paper-scissors.html">Click here</a>
+
+    <hr />
+    <p>Amezone shipping calculator</p>
+    <input
+      type="text"
+      placeholder="Cost of order"
+      class="js-input"
+      onkeydown=" console.log(event.key)
+      if(event.key === 'Enter'){
+        CalculateCost()
+      }
+       "
+    />
+    <button
+      type="submit"
+      onclick="
+    CalculateCost()
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-cost"></p>
     <script>
       const youTubeSubscribeBtn = () => {
         const subscribeBtn = document.querySelector(".js-subscribe-btn");
@@ -22,6 +44,23 @@
           subscribeBtn.innerHTML = "Subscribed";
         } else {
           subscribeBtn.innerHTML = "Subscribe";
+        }
+      };
+
+      //calculate total cost with shipping
+      const CalculateCost = () => {
+        const inputText = document.querySelector(".js-input");
+        let cost = Number(inputText.value); //this provides value inside the text box in type string so to perform math we need to convert string into number
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        const displayCost = document.querySelector(".js-cost");
+        displayCost.innerHTML = `$${cost}`;
+
+        if (displayCost) {
+          inputText.value = ""; //this will clear input box after value is calculated
         }
       };
     </script>
