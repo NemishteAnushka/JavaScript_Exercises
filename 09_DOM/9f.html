@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button
+    onclick="
+    calculateQty(0)
+    " 
+    >show Quantity</button>
+    <button onclick="
+  calculateQty(1)
+    ">Add to cart </button>
+    <button onclick="calculateQty(2)">+2</button>
+    <button onclick="calculateQty(3)">+3</button>
+    <button onclick="calculateQty(4)">+4</button>
+    <button onclick="calculateQty(5)">+5</button>
+    <button onclick="
+    calculateQty(-1)
+    ">Remove from cart</button>
+    <button onclick="calculateQty(-2)">-2</button>
+    <button onclick="calculateQty(-3)">-3</button>
+    <p class="displayQty"></p>
+    <script>
+        let qty = 0
+        const calculateQty = (value) => {
+
+            if(qty + value > 10){
+                alert('The cart is full')
+                return
+            }
+            if(qty + value < 0){
+                alert ('No items present to remove')
+                return
+            }
+            qty = qty + value  
+             document.querySelector('.displayQty').innerHTML = (`Cart Quantity = ${qty}`)
+        }
+    </script>
+</body>
+</html>
