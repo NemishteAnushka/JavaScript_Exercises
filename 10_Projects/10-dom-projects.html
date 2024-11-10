@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Projects</title>
+    <style>
+      .subscribe-btn{
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subcribe Button</p>
+    <button onclick="youTubeSubscribeBtn()" class="js-subscribe-btn subscribe-btn">
+      Subscribe
+    </button>
+
+    <hr />
+
+    <p>Rock paper scissors game</p>
+    <a href="./09-rock-paper-scissors.html">Click here</a>
+
+    <hr />
+    <p>Amezone shipping calculator</p>
+    <input
+      type="text"
+      placeholder="Cost of order"
+      class="js-input"
+      onkeydown=" console.log(event.key)
+      if(event.key === 'Enter'){
+        CalculateCost()
+      }
+       "
+    />
+    <button
+      type="submit"
+      onclick="
+    CalculateCost()
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-cost"></p>
+    <script>
+      const youTubeSubscribeBtn = () => {
+        const subscribeBtn = document.querySelector(".js-subscribe-btn");
+        if (subscribeBtn.innerText === "Subscribe") {
+          subscribeBtn.innerHTML = "Subscribed";
+          // subscribeBtn.style.backgroundColor = 'pink'
+          // subscribeBtn.style.color = "black"
+          //instead of this we can use classList object which gives us the access for class attributes
+          subscribeBtn.classList.add('is-subscribed')
+        } else {
+          subscribeBtn.innerHTML = "Subscribe";
+          //to remove the class
+            subscribeBtn.classList.remove('is-subscribed')
+        }
+      };
+
+      //calculate total cost with shipping
+      const CalculateCost = () => {
+        const inputText = document.querySelector(".js-input");
+        let cost = Number(inputText.value); //this provides value inside the text box in type string so to perform math we need to convert string into number
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        const displayCost = document.querySelector(".js-cost");
+        displayCost.innerHTML = `$${cost}`;
+
+        if (displayCost) {
+          inputText.value = ""; //this will clear input box after value is calculated
+        }
+      };
+    </script>
+  </body>
+</html>
