@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        padding: 12px 15px;
+        border-radius: 5px;
+        background-color: rgb(230, 230, 230);
+        border: none;
+        cursor: pointer;
+      }
+      .is-toggle {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="btn js-gamming"
+      onclick="
+        TogglingFunction('.js-gamming')
+        "
+    >
+      Gamming
+    </button>
+    <button class="btn js-music" onclick="TogglingFunction('.js-music')">
+      Music
+    </button>
+    <button class="btn js-tech" onclick="TogglingFunction('.js-tech')">
+      Tech
+    </button>
+    <script>
+      function TogglingFunction(selector) {
+        const btn = document.querySelector(selector);
+        if (!btn.classList.contains("is-toggle")) {
+          previousToggleButton();
+          btn.classList.add("is-toggle");
+        } else {
+          btn.classList.remove("is-toggle");
+        }
+       
+      }
+       const previousToggleButton = () => {
+          const prevButton = document.querySelector(".is-toggle");
+          if (prevButton) {
+            prevButton.classList.remove("is-toggle");
+          }
+        };
+    </script>
+  </body>
+</html>

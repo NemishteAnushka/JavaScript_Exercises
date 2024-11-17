@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toggle</title>
+    <style>
+      .btn {
+        padding: 12px 15px;
+        border-radius: 5px;
+        background-color: rgb(230, 230, 230);
+        border: none;
+        cursor: pointer;
+      }
+      .is-toggle {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="btn js-gamming"
+      onclick="
+ const buttonGamming = document.querySelector('.js-gamming');
+          if (!buttonGamming.classList.contains('is-toggle')) {
+           buttonGamming.classList.add('is-toggle');
+          } else {
+            buttonGamming.classList.remove('is-toggle');
+          }
+        "
+    >
+      Gaming
+    </button>
+    <button
+      class="btn js-music"
+      onclick="
+    const buttonMusic = document.querySelector('.js-music');
+          if (!buttonMusic.classList.contains('is-toggle')) {
+           buttonMusic.classList.add('is-toggle');
+          } else {
+            buttonMusic.classList.remove('is-toggle');
+          }
+        "
+    >
+      Music
+    </button>
+    <button
+      class="btn js-tech"
+      onclick="
+     const buttonTech = document.querySelector('.js-tech');
+          if (!buttonTech.classList.contains('is-toggle')) {
+           buttonTech.classList.add('is-toggle');
+          } else {
+            buttonTech.classList.remove('is-toggle');
+          }
+        "
+    >
+      Tech
+    </button>
+  </body>
+</html>
