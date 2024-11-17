@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop through array</title>
+  </head>
+  <body>
+    <p>Looping through array</p>
+    <p>Todo List</p>
+    <input type="text" placeholder="Todo Name" class="js-input-val" />
+    <button onclick="addArray()">Add</button>
+    <div class="js-todo-list"></div>
+    <script>
+      let todoArr = [];
+      renderTodoList();
+
+      function renderTodoList() {
+        /* 
+        First Iteration (i = 0):
+        value = "Task 1"
+        html = <p>Task 1</p>
+        storeHtml = "" + "<p>Task 1</p>" = "<p>Task 1</p>"
+        Second Iteration (i = 1):
+
+        value = "Task 2"
+        html = <p>Task 2</p>
+        storeHtml = "<p>Task 1</p>" + "<p>Task 2</p>" = "<p>Task 1</p><p>Task 2</p>"
+        Third Iteration (i = 2):
+
+        value = "Task 3"
+        html = <p>Task 3</p>
+        storeHtml = "<p>Task 1</p><p>Task 2</p>" + "<p>Task 3</p>" = "<p>Task 1</p><p>Task 2</p><p>Task 3</p>"
+*/
+        let storeHtml = "";
+        for (let i = 0; i < todoArr.length; i++) {
+          const value = todoArr[i];
+          const html = `<p>${value}</p>`;
+          storeHtml = storeHtml + html;
+        }
+
+        console.log(storeHtml);
+        document.querySelector(".js-todo-list").innerHTML = storeHtml;
+      }
+
+      const addArray = () => {
+        const todoArray = document.querySelector(".js-input-val");
+        const value = todoArray.value;
+        todoArr.push(value);
+        console.log(todoArr);
+        renderTodoList();
+      };
+    </script>
+  </body>
+</html>
